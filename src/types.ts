@@ -20,7 +20,7 @@ export const DEFAULT_CONFIG: FluidConfig = {
   iterations: 40,
   velocityDissipation: 0.97,
   densityDissipation: 0.98,
-  splatRadius: 0.0015,
+  splatRadius: 0.0004,
   curlIntensity: 10,
   colors: ['#ff0080', '#00ffcc', '#8000ff'],
   colorSpeed: 1.0,
@@ -39,7 +39,7 @@ export const FLUID_PRESETS: Record<FluidMode, Partial<FluidConfig>> = {
     iterations: 40,
     velocityDissipation: 0.97,
     densityDissipation: 0.98,
-    splatRadius: 0.0015,
+    splatRadius: 0.0004,
     curlIntensity: 10,
   },
   storm: {

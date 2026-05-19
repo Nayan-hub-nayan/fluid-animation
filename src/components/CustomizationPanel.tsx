@@ -85,11 +85,11 @@ export function CustomizationPanel({ config, onChange }: PanelProps) {
       </div>
 
       <div className="max-h-[70vh] overflow-y-auto custom-scrollbar p-1.5 space-y-1">
-        {/* Shader Section */}
+        {/* Dynamics Section */}
         <div className="rounded-xl overflow-hidden bg-white/[0.01] border border-white/[0.03]">
           <SectionHeader 
             icon={<Sliders size={12} />} 
-            title="Shader" 
+            title="Dynamics" 
             isOpen={activeSections.shader} 
             onClick={() => toggleSection('shader')} 
           />
@@ -103,21 +103,21 @@ export function CustomizationPanel({ config, onChange }: PanelProps) {
               >
                 <div className="p-3 space-y-4 border-l border-white/5 ml-4 mb-2">
                   <SliderRow 
-                    label="splatRadius" 
+                    label="Brush Size" 
                     value={config.splatRadius * 10000} 
                     min={1} 
                     max={20} 
                     onChange={(v) => onChange({ splatRadius: v / 10000 })} 
                   />
                   <SliderRow 
-                    label="dissipation" 
+                    label="Retention" 
                     value={config.densityDissipation * 100} 
                     min={90} 
                     max={99.9} 
                     onChange={(v) => onChange({ densityDissipation: v / 100, velocityDissipation: (v - 0.5) / 100 })} 
                   />
                   <SliderRow 
-                    label="colorSpeed" 
+                    label="Flow Rate" 
                     value={config.colorSpeed} 
                     min={0} 
                     max={5} 
@@ -141,11 +141,11 @@ export function CustomizationPanel({ config, onChange }: PanelProps) {
           </AnimatePresence>
         </div>
 
-        {/* Palette Section */}
+        {/* Spectrum Section */}
         <div className="rounded-xl overflow-hidden bg-white/[0.01] border border-white/[0.03]">
           <SectionHeader 
             icon={<Palette size={12} />} 
-            title="Palette" 
+            title="Spectrum" 
             isOpen={activeSections.palette} 
             onClick={() => toggleSection('palette')} 
           />
