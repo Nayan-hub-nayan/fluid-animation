@@ -1,0 +1,6 @@
+{
+  "name": "Chromaflow",
+  "description": "An immersive, interactive flowing color field with smooth animations and subtle parallax effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
