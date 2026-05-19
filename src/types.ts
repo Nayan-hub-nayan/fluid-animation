@@ -1,5 +1,5 @@
 
-export type FluidMode = 'flow' | 'dense' | 'storm';
+export type FluidMode = 'flow' | 'dense' | 'storm' | 'nebula';
 
 export interface FluidConfig {
   mode: FluidMode;
@@ -48,5 +48,12 @@ export const FLUID_PRESETS: Record<FluidMode, Partial<FluidConfig>> = {
     densityDissipation: 0.995,
     splatRadius: 0.0008,
     curlIntensity: 80,
+  },
+  nebula: {
+    iterations: 30,
+    velocityDissipation: 0.992,
+    densityDissipation: 0.96,
+    splatRadius: 0.0006,
+    curlIntensity: 45,
   }
 };

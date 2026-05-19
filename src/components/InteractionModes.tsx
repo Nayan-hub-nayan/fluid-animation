@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Wind, Droplets, Ghost, Zap } from 'lucide-react';
+import { Wind, Droplets, Zap, Sparkles } from 'lucide-react';
 import { FluidMode, FLUID_PRESETS, FluidConfig } from '../types';
 
 interface ModesProps {
@@ -11,6 +11,7 @@ const MODES = [
   { id: 'flow', label: 'Classic Flow', icon: <Wind size={16} />, color: '#3B82F6' },
   { id: 'dense', label: 'Liquid Blobs', icon: <Droplets size={16} />, color: '#EC4899' },
   { id: 'storm', label: 'Plasma Storm', icon: <Zap size={16} />, color: '#F59E0B' },
+  { id: 'nebula', label: 'Cosmic Nebula', icon: <Sparkles size={16} />, color: '#8B5CF6' },
 ] as const;
 
 export function InteractionModes({ currentMode, onModeChange }: ModesProps) {
